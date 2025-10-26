@@ -1,0 +1,20 @@
+node_modules/
+.env
+*.log
+.DS_Store
+coverage/
+dist/
+build/
+.env.local
+.env.production
+
+# PM2
+.pm2/
+
+# Logs
+logs/
+*.log
+
+# OS
+Thumbs.db
+desktop.ini
