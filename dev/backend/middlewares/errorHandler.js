@@ -4,8 +4,17 @@ const errorHandler = (err, req, res, next) => {
   let error = { ...err };
   error.message = err.message;
 
-  // Log error
-  logger.error(err);
+  // Don't log 404 errors for favicon and robots.txt
+  if (req.originalUrl?.includes('favicon.ico') || req.originalUrl?.includes('robots.txt')) {
+    return res.status(204).end();
+  }
+
+  // Log error only if it's not a common 404
+  if (err.message !== 'Not found - /favicon.ico' && 
+      err.message !== 'Not found - /robots.txt' &&
+      !req.originalUrl?.includes('favicon')) {
+    logger.error(err);
+  }
 
   // Sequelize validation error
   if (err.name === 'SequelizeValidationError') {
