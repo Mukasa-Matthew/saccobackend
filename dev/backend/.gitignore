@@ -1,12 +1,9 @@
 node_modules/
-.env
 *.log
 .DS_Store
 coverage/
 dist/
 build/
-.env.local
-.env.production
 
 # PM2
 .pm2/
@@ -18,3 +15,4 @@ logs/
 # OS
 Thumbs.db
 desktop.ini
+.env
