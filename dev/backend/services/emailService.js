@@ -61,7 +61,7 @@ const emailService = {
                 
                 <p>You can now login to your account and manage your SACCO operations.</p>
                 
-                <a href="${process.env.FRONTEND_URL || 'http://localhost:3000/login'}" class="button">
+                <a href="${process.env.FRONTEND_URL || 'http://100.75.39.40:3333/login'}" class="button">
                   Login Now
                 </a>
               </div>
@@ -89,7 +89,7 @@ const emailService = {
           
           ⚠️ Please change your password after first login.
           
-          You can now login at: ${process.env.FRONTEND_URL || 'http://localhost:3000/login'}
+          You can now login at: ${process.env.FRONTEND_URL || 'http://100.75.39.40:3333/login'}
           
           This is an automated email. Please do not reply.
         `
